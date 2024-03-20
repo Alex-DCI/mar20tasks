@@ -1,9 +1,11 @@
 public class Task {
     public static void main(String[] args) {
-        String source = "something";
-        for (int i = 0; i < source.length(); i += 2) {
-            source = source.substring(0, i) + Character.toUpperCase(source.charAt(i)) + source.substring(i + 1);
+        String source = "AnyStringYouWantToCheck";
+        int counter = 0;
+        for (int i = 0; i < source.length(); i++) {
+            char c = Character.toLowerCase(source.charAt(i));
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') counter++;
         }
-        System.out.println(source);
+        System.out.println(counter);
     }
 }
